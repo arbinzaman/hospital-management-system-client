@@ -1,15 +1,15 @@
-# Client Project
+# Hospital Management System
 
-This project is a web application built using modern JavaScript frameworks and libraries. It leverages React for building user interfaces, Vite for fast and optimized development, and Tailwind CSS for styling.
+This project is a web-based hospital management system designed for PC devices. It integrates various technologies such as React for the frontend, Firebase for authentication and real-time database features, MongoDB as the NoSQL database for storing structured data, and utilizes QR code generation for efficient patient and appointment management.
 
 ## Table of Contents
 
 - [Features](#features)
-- [Screenshots](ProjectSs.png)
-- [Role Management System](#role-management-system)
+- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
   - [Development](#development)
   - [Building](#building)
   - [Preview](#preview)
@@ -27,40 +27,43 @@ This project is a web application built using modern JavaScript frameworks and l
 - **React Icons**: Includes a comprehensive library of icons.
 - **React Toastify**: For elegant and customizable toast notifications.
 - **DaisyUI**: A plugin for Tailwind CSS to provide accessible components.
-- **React Calendar**: An interactive calendar component for React.
-- **React Quill**: A rich text editor component for React.
-- **React QR Code**: For generating QR codes within the application.
-- **React to Print**: Provides functionality to print React components.
-- **HTML2Canvas & HTML2PDF**: Tools for converting HTML to canvas or PDF.
+- **React Calendar**: An interactive calendar component for managing appointments.
+- **React Quill**: A rich text editor component for detailed medical notes.
+- **React QR Code**: For generating QR codes to streamline patient identification and management.
+- **React to Print**: Provides functionality to print patient records and reports.
+- **HTML2Canvas & HTML2PDF**: Tools for converting medical reports and documents to PDF format.
 - **SweetAlert2**: For beautiful and responsive alert dialogs.
-- **File Saver**: Allows saving files on the client side.
+- **File Saver**: Allows saving medical documents on the client side.
 - **jspdf**: A library to generate PDFs in JavaScript.
-- **html-to-text**: Converts HTML content to plain text.
+- **html-to-text**: Converts HTML medical content to plain text.
 
 ### Highlighted Features
 
-- **Monthly Log**: Track and manage monthly activities with an interactive log feature.
-- **QR Code Generation**: Easily generate and integrate QR codes within the application.
+- **QR Code Feature**: Generate and scan QR codes for quick patient identification and appointment tracking.
+- **Real-time Data**: Utilizes Firebase for real-time updates and authentication.
+- **MongoDB Integration**: Stores structured medical data securely using MongoDB as the backend database.
 
 ## Screenshots
 
 Here are some screenshots of the application:
 
-![Dashboard](ProjectSs.png)
-*Dashboard view showcasing the overview of activities and statistics.*
+![Dashboard](https://github.com/arbinzaman/hospital-management-system-client/blob/main/src/components/Assets/dashboard.png)
+*Dashboard view showcasing the overview of patient statistics and appointments.*
+![QR Code Generator](https://github.com/arbinzaman/hospital-management-system-client/blob/main/src/components/Assets/qr.png)
+*QR Code generation screen for creating and managing patient QR codes.*
 
-![QR Code Generator](QrSs.png)
-*QR Code generation screen for creating and managing QR codes.*
 
-## Role Management System
+# Environment Variables
+Create a .env file in the root directory and add the necessary environment variables:
 
-The application includes a comprehensive role management system, allowing administrators to define and manage user roles and permissions. This system ensures secure and organized access to different parts of the application based on user roles.
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+REACT_APP_MONGODB_URI=your_mongodb_uri
 
-### Features
 
-- **Role Definition**: Create and define roles with specific permissions.
-- **User Assignment**: Assign roles to users for controlled access.
-- **Permission Management**: Manage permissions for each role to control access to features and data.
+Replace your_firebase_api_key, your_firebase_auth_domain, your_firebase_project_id, and your_mongodb_uri with your Firebase and MongoDB credentials.
+
 
 ## Getting Started
 
@@ -79,4 +82,3 @@ Clone the repository and install the dependencies:
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 npm install
-
