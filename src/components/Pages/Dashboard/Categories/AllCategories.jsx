@@ -13,7 +13,7 @@ const AllCategories = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/api/v1/category/all`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/category/all`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
       },

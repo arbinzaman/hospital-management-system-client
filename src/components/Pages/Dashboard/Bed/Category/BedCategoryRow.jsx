@@ -32,7 +32,7 @@ const BedCategoryRow = ({ category, i, refetch, setRefetch }) => {
     }).then((results) => {
       if (results.isConfirmed) {
         fetch(
-          `http://localhost:5000/api/v1/bed/category/${id}`,
+          `https://hms-server-uniceh.vercel.app/api/v1/bed/category/${id}`,
           requestOptions
         )
           .then((response) => response.json())

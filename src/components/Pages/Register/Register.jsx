@@ -71,7 +71,7 @@ const Register = () => {
     };
 
     // login send to backend
-    fetch("http://localhost:5000/api/v1/user/signup", {
+    fetch("https://hms-server-uniceh.vercel.app/api/v1/user/signup", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

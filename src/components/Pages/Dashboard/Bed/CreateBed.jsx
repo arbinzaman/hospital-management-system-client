@@ -16,7 +16,7 @@ const CreateBed = () => {
     const fetchCategories = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/v1/bed/category`,
+        `https://hms-server-uniceh.vercel.app/api/v1/bed/category`,
         {
           method: "GET",
           headers: {
@@ -45,7 +45,7 @@ const CreateBed = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/api/v1/bed/create`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/bed/create`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

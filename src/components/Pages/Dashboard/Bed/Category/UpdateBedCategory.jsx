@@ -15,7 +15,7 @@ const UpdateBedCategory = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/bed/category/${id}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/bed/category/${id}`,
         {
           method: "GET",
           headers: {
@@ -44,7 +44,7 @@ const UpdateBedCategory = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/api/v1/bed/category/${id}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/bed/category/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

@@ -30,7 +30,7 @@ const TestNameRow = ({ category, i, refetch, setRefetch }) => {
       confirmButtonText: "Okay",
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`http://localhost:5000/api/v1/test_name/${id}`, requestOptions)
+        fetch(`https://hms-server-uniceh.vercel.app/api/v1/test_name/${id}`, requestOptions)
           .then((response) => response.json())
           .then((result) => {
             setDelLoading(false);

@@ -15,7 +15,7 @@ const UpdateSubCat = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/sub_category/${categoryId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/sub_category/${categoryId}`,
         {
           method: "GET",
           headers: {
@@ -48,7 +48,7 @@ const UpdateSubCat = () => {
       nature,
     };
 
-    fetch(`http://localhost:5000/api/v1/sub_category/${categoryId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/sub_category/${categoryId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

@@ -31,7 +31,7 @@ const TestRow = ({ invoice, role, setRefetch }) => {
     }).then((results) => {
       if (results.isConfirmed) {
         fetch(
-          `http://localhost:5000/api/v1/test/${id}`,
+          `https://hms-server-uniceh.vercel.app/api/v1/test/${id}`,
           requestOptions
         )
           .then((response) => response.json())

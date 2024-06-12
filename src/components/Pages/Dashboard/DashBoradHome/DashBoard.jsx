@@ -60,7 +60,7 @@ const DashBoard = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:5000/api/v1/dashboard", requestOptions)
+    fetch("https://hms-server-uniceh.vercel.app/api/v1/dashboard", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         dispatch({

@@ -14,7 +14,7 @@ const CreateInvoice = () => {
   const { patientId } = useParams();
   const navigate = useNavigate();
 
-  const baseUrl = "http://localhost:5000/api/v1";
+  const baseUrl = "https://hms-server-uniceh.vercel.app/api/v1";
 
   const fetchData = async (path, successActionType) => {
     const response = await fetch(`${baseUrl}${path}`, {
@@ -84,7 +84,7 @@ const CreateInvoice = () => {
       grand_total: state.grandTotal,
     };
 
-    fetch(`http://localhost:5000/api/v1/invoice/create/${patientId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/invoice/create/${patientId}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -113,7 +113,7 @@ const CreateInvoice = () => {
     if (id === "Select")
       return dispatch({ type: "SET_SUB_CAT_LOADING", payload: false });
     const response = await fetch(
-      `http://localhost:5000/api/v1/category/${id}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/category/${id}`,
       {
         method: "GET",
         headers: {

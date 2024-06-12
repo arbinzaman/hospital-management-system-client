@@ -16,7 +16,7 @@ const ExpCatDetails = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/expense/category/${categoryId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/expense/category/${categoryId}`,
         {
           method: "GET",
           headers: {

@@ -70,7 +70,7 @@ const UpdatePassword = () => {
       newPassword: newPassword,
     };
 
-    fetch(`http://localhost:5000/api/v1/user/update-password`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/user/update-password`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

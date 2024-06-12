@@ -40,7 +40,7 @@ const RichTextUpdate = ({ id }) => {
   ];
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/v1/test/${id}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/test/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
@@ -86,7 +86,7 @@ const RichTextUpdate = ({ id }) => {
     if (imageUrl) formData.append("image", image, image?.name);
     if (content) formData.append("remarks", content);
 
-    fetch(`http://localhost:5000/api/v1/test/upload-image/${id}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/test/upload-image/${id}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

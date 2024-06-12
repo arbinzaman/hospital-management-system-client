@@ -88,7 +88,7 @@ const AllExpense = () => {
   const handleExport = async (statement) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/expense/${statement}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/expense/${statement}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
@@ -120,7 +120,7 @@ const AllExpense = () => {
       payload: state.key && state.value ? true : false,
     });
     fetch(
-      `http://localhost:5000/api/v1/expense/all?page=${state.pageNumber}&limit=${state.size}&key=${state.key}&value=${state.value}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/expense/all?page=${state.pageNumber}&limit=${state.size}&key=${state.key}&value=${state.value}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

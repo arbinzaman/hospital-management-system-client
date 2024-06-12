@@ -14,7 +14,7 @@ const PrivateRoute = ({ children }) => {
 
     // fetching userInfo from backend
     useEffect(() => {
-        fetch("http://localhost:5000/api/v1/user/user-info", {
+        fetch("https://hms-server-uniceh.vercel.app/api/v1/user/user-info", {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
             },

@@ -30,7 +30,7 @@ const SubCatRow = ({ category, i, refetch, setRefetch }) => {
       confirmButtonText: "Okay",
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`http://localhost:5000/api/v1/sub_category/${id}`, requestOptions)
+        fetch(`https://hms-server-uniceh.vercel.app/api/v1/sub_category/${id}`, requestOptions)
           .then((response) => response.json())
           .then((result) => {
             setDelLoading(false);

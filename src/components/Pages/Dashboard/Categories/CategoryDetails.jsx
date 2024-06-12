@@ -18,7 +18,7 @@ const CategoryDetails = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/category/${categoryId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/category/${categoryId}`,
         {
           method: "GET",
           headers: {

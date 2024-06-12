@@ -15,7 +15,7 @@ const UpdateCategory = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/category/${categoryId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/category/${categoryId}`,
         {
           method: "GET",
           headers: {
@@ -42,7 +42,7 @@ const UpdateCategory = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/api/v1/category/${categoryId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/category/${categoryId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

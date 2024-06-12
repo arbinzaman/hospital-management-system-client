@@ -59,7 +59,7 @@ const UpdatePresciption = () => {
       confirmButtonText: "Book",
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`http://localhost:5000/api/v1/appointment/${id}`, {
+        fetch(`https://hms-server-uniceh.vercel.app/api/v1/appointment/${id}`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

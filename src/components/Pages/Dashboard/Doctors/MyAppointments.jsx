@@ -30,7 +30,7 @@ const MyAppointments = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `http://localhost:5000/api/v1/appointment/my-appointments?page=${pageNumber}&limit=${size}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/appointment/my-appointments?page=${pageNumber}&limit=${size}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

@@ -20,7 +20,7 @@ const CreateExpCat = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/api/v1/expense/category/create`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/expense/category/create`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

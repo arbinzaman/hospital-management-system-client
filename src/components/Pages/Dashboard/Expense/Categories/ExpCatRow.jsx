@@ -30,7 +30,7 @@ const ExpCatRox = ({ expense, role, setRefetch, i }) => {
       confirmButtonText: "Okay",
     }).then((results) => {
       if (results.isConfirmed) {
-        fetch(`http://localhost:5000/api/v1/expense/category/${id}`, requestOptions)
+        fetch(`https://hms-server-uniceh.vercel.app/api/v1/expense/category/${id}`, requestOptions)
           .then((response) => response.json())
           .then((result) => {
             if (result.status === "success") toast.success(result.message);

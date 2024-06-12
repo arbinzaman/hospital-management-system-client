@@ -31,7 +31,7 @@ const useUserData = () => {
     const fetchUserData = async () => {
       dispatch({ type: "SET_LOADING", payload: true });
       const response = await fetch(
-        "http://localhost:5000/api/v1/user/user-info",
+        "https://hms-server-uniceh.vercel.app/api/v1/user/user-info",
         {
           method: "GET",
           headers: {

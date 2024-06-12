@@ -94,7 +94,7 @@ const AllInvoice = () => {
   const handleExport = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/invoice/monthly-invoices",
+        "https://hms-server-uniceh.vercel.app/api/v1/invoice/monthly-invoices",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
@@ -126,7 +126,7 @@ const AllInvoice = () => {
       payload: state.key && state.value ? true : false,
     });
     fetch(
-      `http://localhost:5000/api/v1/invoice/all-invoices?page=${state.pageNumber}&limit=${state.size}&key=${state.key}&value=${state.value}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/invoice/all-invoices?page=${state.pageNumber}&limit=${state.size}&key=${state.key}&value=${state.value}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

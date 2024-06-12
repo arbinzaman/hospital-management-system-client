@@ -15,7 +15,7 @@ const UpdateTestName = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/test_name/${categoryId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/test_name/${categoryId}`,
         {
           method: "GET",
           headers: {
@@ -42,7 +42,7 @@ const UpdateTestName = () => {
       normalValue,
     };
 
-    fetch(`http://localhost:5000/api/v1/test_name/${categoryId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/test_name/${categoryId}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

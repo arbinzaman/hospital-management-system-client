@@ -16,7 +16,7 @@ const Appointment = () => {
     const fetchUserData = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/v1/user/all-doctors`,
+        `https://hms-server-uniceh.vercel.app/api/v1/user/all-doctors`,
         {
           method: "GET",
           headers: {
@@ -44,7 +44,7 @@ const Appointment = () => {
     const appointmentData = { reason, appointed_to, paymentCompleted, amount };
 
     // add appointment to the backend
-    fetch(`http://localhost:5000/api/v1/appointment/add-appointment/${id}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/appointment/add-appointment/${id}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

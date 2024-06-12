@@ -39,7 +39,7 @@ const AddAPatient = () => {
     };
 
     // All Patient Send To Backend
-    fetch("http://localhost:5000/api/v1/patient/add-new-patient", {
+    fetch("https://hms-server-uniceh.vercel.app/api/v1/patient/add-new-patient", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

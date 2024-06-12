@@ -16,7 +16,7 @@ const CreateExpense = () => {
     const fetchCategories = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/v1/expense/category/all`,
+        `https://hms-server-uniceh.vercel.app/api/v1/expense/category/all`,
         {
           method: "GET",
           headers: {
@@ -45,7 +45,7 @@ const CreateExpense = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/api/v1/expense/create`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/expense/create`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

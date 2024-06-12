@@ -35,7 +35,7 @@ const UserProfile = () => {
         const formData = new FormData();
         formData.append("image", image, image?.name);
         // send to backend
-        fetch("http://localhost:5000/api/v1/user/upload-picture", {
+        fetch("https://hms-server-uniceh.vercel.app/api/v1/user/upload-picture", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

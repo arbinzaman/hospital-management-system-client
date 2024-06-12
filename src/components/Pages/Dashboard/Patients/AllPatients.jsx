@@ -102,7 +102,7 @@ const AllPatients = () => {
       payload: state.name && state.value ? true : false,
     });
     fetch(
-      `http://localhost:5000/api/v1/patient/all-patient?page=${state.pageNumber}&limit=${state.size}&key=${state.name}&value=${state.value}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/patient/all-patient?page=${state.pageNumber}&limit=${state.size}&key=${state.name}&value=${state.value}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

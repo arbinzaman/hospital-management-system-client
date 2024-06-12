@@ -55,7 +55,7 @@ const InvoicePage = () => {
             Swal.showLoading();
 
             const response = await fetch(
-              `http://localhost:5000/api/v1/invoice/status/${invoiceId}`,
+              `https://hms-server-uniceh.vercel.app/api/v1/invoice/status/${invoiceId}`,
               {
                 method: "POST",
                 headers: {
@@ -104,7 +104,7 @@ const InvoicePage = () => {
     const fetchInvoiceData = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/v1/invoice/${invoiceId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/invoice/${invoiceId}`,
         {
           method: "GET",
           headers: {

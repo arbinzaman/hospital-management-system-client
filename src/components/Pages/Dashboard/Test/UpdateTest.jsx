@@ -98,7 +98,7 @@ const UpdateTest = () => {
 
     Swal.showLoading();
 
-    fetch(`http://localhost:5000/api/v1/test/${testId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/test/${testId}`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
@@ -141,7 +141,7 @@ const UpdateTest = () => {
     const formData = new FormData();
     formData.append("pdf", state.image, state.image?.name);
 
-    fetch(`http://localhost:5000/api/v1/test/upload/${testId}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/test/upload/${testId}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
@@ -181,7 +181,7 @@ const UpdateTest = () => {
     const fetchInvoiceData = async () => {
       dispatch({ type: "SET_LOADING", payload: true });
       const response = await fetch(
-        `http://localhost:5000/api/v1/test/${testId}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/test/${testId}`,
         {
           method: "GET",
           headers: {

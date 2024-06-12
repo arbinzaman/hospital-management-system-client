@@ -38,7 +38,7 @@ const NewPatientProfile = ({ qr }) => {
     };
 
     fetch(
-      `http://localhost:5000/api/v1/bed/unassign/${bedId}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/bed/unassign/${bedId}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -58,8 +58,8 @@ const NewPatientProfile = ({ qr }) => {
     const fetchUserData = async () => {
       const response = await fetch(
         qr
-          ? `http://localhost:5000/api/v1/patient/qr/${id}`
-          : `http://localhost:5000/api/v1/patient/${id}`,
+          ? `https://hms-server-uniceh.vercel.app/api/v1/patient/qr/${id}`
+          : `https://hms-server-uniceh.vercel.app/api/v1/patient/${id}`,
         {
           method: "GET",
           headers: {

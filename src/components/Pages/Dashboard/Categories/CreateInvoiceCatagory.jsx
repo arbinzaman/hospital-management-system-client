@@ -20,7 +20,7 @@ const CreateInvoiceCategory = () => {
       name: name,
       description: description,
     };
-    fetch(`http://localhost:5000/api/v1/category/create`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/category/create`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -13,7 +13,7 @@ const AllBedCategories = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/api/v1/bed/category`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/bed/category`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,
       },

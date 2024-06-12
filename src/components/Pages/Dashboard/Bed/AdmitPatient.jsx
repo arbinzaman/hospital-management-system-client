@@ -18,7 +18,7 @@ const AdmitPatient = () => {
     const fetchCategories = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/v1/bed/available`,
+        `https://hms-server-uniceh.vercel.app/api/v1/bed/available`,
         {
           method: "GET",
           headers: {
@@ -40,7 +40,7 @@ const AdmitPatient = () => {
     if (!event.target.category.value) return toast.error("Please select a bed");
 
     fetch(
-      `http://localhost:5000/api/v1/bed/assign/${event.target.category.value}`,
+      `https://hms-server-uniceh.vercel.app/api/v1/bed/assign/${event.target.category.value}`,
       {
         method: "PATCH",
         headers: {

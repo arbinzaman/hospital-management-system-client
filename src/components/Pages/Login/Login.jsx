@@ -22,7 +22,7 @@ const Login = () => {
       password: password,
     };
     // login send to backend
-    fetch("http://localhost:5000/api/v1/user/login", {
+    fetch("https://hms-server-uniceh.vercel.app/api/v1/user/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",

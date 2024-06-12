@@ -16,7 +16,7 @@ const PcDetails = () => {
 
   useEffect(() => {
     const fetchExpense = async () => {
-      const response = await fetch(`http://localhost:5000/api/v1/pc/${id}`, {
+      const response = await fetch(`https://hms-server-uniceh.vercel.app/api/v1/pc/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("LoginToken")}`,

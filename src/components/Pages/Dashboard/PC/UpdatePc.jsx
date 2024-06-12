@@ -15,7 +15,7 @@ const UpdatePc = () => {
   useEffect(() => {
     const fetchExpense = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/v1/pc/${id}`,
+        `https://hms-server-uniceh.vercel.app/api/v1/pc/${id}`,
         {
           method: "GET",
           headers: {
@@ -46,7 +46,7 @@ const UpdatePc = () => {
       organization,
     };
 
-    fetch(`http://localhost:5000/api/v1/pc/${id}`, {
+    fetch(`https://hms-server-uniceh.vercel.app/api/v1/pc/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
